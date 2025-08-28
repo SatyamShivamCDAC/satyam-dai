@@ -9,5 +9,9 @@ public class Main {
 
         tw.displayDetails();
         fw.displayDetails();
+
+
+        Policy.displayInsurance(tw);
+        Policy.displayInsurance(fw);
     }
 }
