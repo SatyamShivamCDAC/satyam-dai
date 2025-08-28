@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/Assignment/src/Assignment.iml" filepath="$PROJECT_DIR$/CoreJava/Assignment/src/Assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/Assignment/Assignment2.iml" filepath="$PROJECT_DIR$/CoreJava/Assignment/Assignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/Calender/Calender.iml" filepath="$PROJECT_DIR$/CoreJava/Calender/Calender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/Classwork/Classwork.iml" filepath="$PROJECT_DIR$/CoreJava/Classwork/Classwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Satyam.iml" filepath="$PROJECT_DIR$/.idea/Satyam.iml" />
+    </modules>
+  </component>
+</project>
