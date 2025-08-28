@@ -19,10 +19,10 @@ public class Main {
         System.out.println(acc2);
         System.out.println(acc3);
 
-        System.out.println("Write Senders Account Number - ");
+        System.out.print("\nWrite Senders Account Number - ");
         int sender = input.nextInt();
 
-        System.out.println("Write Senders Account Number - ");
+        System.out.print("Write Recieve Account Number - ");
         int reciever = input.nextInt();
 
         int senderIndex = -1;
@@ -39,12 +39,12 @@ public class Main {
                 recieverIndex = i;
             }
         }
-        System.out.println("Write Amount to be tranferred - ");
+        System.out.print("Write Amount to be tranferred - ");
         int amount = input.nextInt();
 
         Account.transaction(account[senderIndex],account[recieverIndex],amount);
 
-        System.out.println(acc1);
+        System.out.println("\n"+acc1);
         System.out.println(acc2);
         System.out.println(acc3);
     }

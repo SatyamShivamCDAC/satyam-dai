@@ -41,10 +41,11 @@ public abstract class Account {
     public static void transaction(Account acc1, Account acc2,int amount){
 
         if(acc1.withdraw(amount) == true){
-            if(acc2.withdraw(amount) == true){
-                System.out.println("Transaction Successfull");
+            if(acc2.deposit(amount) == true){
+                System.out.println("\nTransaction Successfull");
             }
             else {
+                acc1.deposit(amount);
                 System.out.println("Transaction Unsuccessfull");
             }
         }
@@ -60,6 +61,6 @@ public abstract class Account {
                 "accNo=" + accNo +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
-                '}' + "\n";
+                '}';
     }
 }
