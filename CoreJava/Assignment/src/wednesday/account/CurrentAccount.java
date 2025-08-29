@@ -11,11 +11,11 @@ public class CurrentAccount extends Account{
     @Override
     public boolean withdraw(int amount) {
         if(amount > super.getBalance()){
-//            System.out.println("Insufficient Funds");
+            System.out.println("\nInsufficient balance to be transfered");
             return false;
         }
         else if (amount > 50000){
-//            System.out.println("Amount is greater than 50000");
+            System.out.println("\nCan't Tranfer more than 50000 through current account");
             return false;
         }
         else{
@@ -30,7 +30,7 @@ public class CurrentAccount extends Account{
     public boolean deposit(int amount) {
 
         if(amount <= 50){
-//            System.out.println("\nMinimum of 50 rs is requried to be deposited\n");
+            System.out.println("\nMinimum of 50 rs is requried to be deposited in current account");
             return false;
         }
         else{

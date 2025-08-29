@@ -18,11 +18,11 @@ public class SavingAccout extends Account{
 
             super.setBalance(super.getBalance() - amount - 500);
 //            System.out.format("\nAmount withdraw with penalty\nCurrent balance - %f \n",super.getBalance());
-            return false;
+            return true;
         }
 
         else{
-//            System.out.println("\nInsuffient Fund\n");
+            System.out.println("\nInsuffient Balance to tranfer amount");
             return false;
         }
 
@@ -31,7 +31,7 @@ public class SavingAccout extends Account{
         }
     public boolean deposit(int amount){
         if(amount <= 0){
-//            System.out.println("\nincorrect input\n");
+            System.out.println("\nCant transfer negative amount");
             return false;
         }
         else{
