@@ -13,11 +13,30 @@ public class Main {
         SavingAccout acc3 = new SavingAccout(103,"Arbab",12000);
 
 
+
         Account[] account = new Account[]{acc1,acc2,acc3};
 
         System.out.println(acc1);
         System.out.println(acc2);
         System.out.println(acc3);
+
+        System.out.print("\nWrite amount to be withdrawn from Saving Account " + acc1.getAccNo() +" - ");
+        int amount = input.nextInt();
+        if(acc1.withdraw(amount)){
+            System.out.println("Amount withdrawn - " + amount);
+        }
+
+        System.out.print("\nWrite amount to be deposied from Saving Account " + acc2.getAccNo() +" - ");
+        amount = input.nextInt();
+        if(acc2.deposit(amount)){
+            System.out.println("Amount withdrawn - " + amount);
+        }
+
+
+//
+//        System.out.println("\n"+acc1);
+//        System.out.println(acc2);
+//        System.out.println(acc3);
 
         System.out.print("\nWrite Senders Account Number - ");
         int sender = input.nextInt();
@@ -40,7 +59,7 @@ public class Main {
             }
         }
         System.out.print("Write Amount to be tranferred - ");
-        int amount = input.nextInt();
+        amount = input.nextInt();
 
         Account.transaction(account[senderIndex],account[recieverIndex],amount);
 

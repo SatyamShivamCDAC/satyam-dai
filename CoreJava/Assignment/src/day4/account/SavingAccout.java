@@ -1,15 +1,19 @@
-package wednesday.account;
+package day4.account;
 
-public class SavingAccout extends Account{
+public class SavingAccout extends Account {
 
     public SavingAccout(long accNo, String name, double balance) {
         super(accNo,name,balance);
 
     }
 
-    public boolean withdraw(int amount){
+    public boolean withdraw(int amount) throws InvalidAmmountException,MInBalanceException,InsufficientBalanceException{
 
-        if (super.getBalance() - amount >= 10000){
+        if(amount<0){
+            throw new InvalidAmmountException();
+        }
+
+        else if (super.getBalance() - amount >= 10000){
             super.setBalance(super.getBalance() - amount);
 //            System.out.format("\nAmount withdraw\nCurrent balance - %f \n",super.getBalance());
             return true;
@@ -17,22 +21,20 @@ public class SavingAccout extends Account{
         else if (super.getBalance() - amount > 500 && super.getBalance() - amount < 10000){
 
             super.setBalance(super.getBalance() - amount - 500);
-            System.out.format("\nAmount withdraw with penalty\n");
-            return true;
+//            System.out.format("\nAmount withdraw with penalty\nCurrent balance - %f \n",super.getBalance());
+            throw new MInBalanceException();
         }
 
         else{
-            System.out.println("\nInsuffient Balance to tranfer amount");
-            return false;
+            throw new InsufficientBalanceException();
         }
 
 
 
         }
-    public boolean deposit(int amount){
+    public boolean deposit(int amount) throws InvalidAmmountException{
         if(amount <= 0){
-            System.out.println("\nCant transfer negative amount");
-            return false;
+            throw new InvalidAmmountException();
         }
         else{
             super.setBalance(super.getBalance()+amount);
