@@ -15,7 +15,7 @@ public class Fruits {
     }
 
     public static void main(String[] args) {
-        String[] fruits = {"MANGO", "ORANGE", "GRAPES", "apple", "Banana", "strawberry", "Watermelon"};
+        String[] fruits = {"MANGO", "Orange", "GRAPES", "apple", "banana", "strawberry", "Watermelon"};
 
         Stream<String> stream = Arrays.stream(fruits);
 
@@ -31,15 +31,15 @@ public class Fruits {
 //        System.out.println(lessThanN);
 
 
-        List<String> lessThanNDesc = stream.filter(s->Character.getNumericValue(s.charAt(0))<='n').sorted(new UnicodeComparatorDesc()).collect(Collectors.toList());
-        System.out.println(lessThanNDesc);
+//        List<String> lessThanNDesc = stream.filter(s->Character.getNumericValue(s.charAt(0))<='n').sorted(new UnicodeComparatorDesc()).collect(Collectors.toList());
+//        System.out.println(lessThanNDesc);
 
 
 //
 //        List<String> isUpper = stream.filter(Fruits::isUpper).collect(Collectors.toList());
 //        System.out.println(isUpper);
 
-//        List<String> lessThan6 = stream.map(String::toLowerCase).filter(s->s.length()<=6).sorted(new ReverseLenghtCompartor()).collect(Collectors.toList());
-//        System.out.println(lessThan6);
+        List<String> lessThan6 = stream.sorted(new UnicodeComparator()).filter(s->s.length()<=6).sorted(new ReverseLenghtCompartor()).collect(Collectors.toList());
+        System.out.println(lessThan6);
     }
 }
