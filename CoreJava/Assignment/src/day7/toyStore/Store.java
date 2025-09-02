@@ -3,6 +3,7 @@ package day7.toyStore;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -52,6 +53,9 @@ public class Store {
         for(String key : listOfToys.keySet()){
             System.out.println(key + " - " + listOfToys.get(key).size());
         }
+
+//        Map<String, Long> listOfToys = stream
+//                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
 
     }
