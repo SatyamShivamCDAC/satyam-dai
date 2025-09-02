@@ -69,5 +69,6 @@ public class Media {
         stream = playlist.stream();
         Comparator<Song> sortByYearAndMovie = Comparator.comparing(Song::getReleaseYear).thenComparing(Song::getMovie);
         stream.sorted(sortByYearAndMovie).forEach(System.out::println);
+        
     }
 }
