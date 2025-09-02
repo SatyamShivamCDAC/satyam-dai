@@ -50,8 +50,8 @@ public class Tweeter {
 
 
         System.out.println("---top 5 trending topics-----");
-        Comparator<Tweet> trending = Comparator.comparing(Tweet::getYear).thenComparing(Tweet::getMonth).reversed();
-        stream.sorted(trending).forEach(System.out::println);
+        Comparator<Tweet> trending = Comparator.comparing(Tweet::getYear).thenComparing(Tweet::getMonth).thenComparing(Tweet::getNoOfViews).reversed();
+        stream.sorted(trending).limit(5).forEach(System.out::println);
 
     }
 
