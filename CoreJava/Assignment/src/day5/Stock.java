@@ -9,6 +9,10 @@ public class Stock {
 
     private List<Toy> toys;
 
+    public Toy getToyAtIndex(int i){
+        return toys.get(i);
+    }
+
     public Stock() {
         this.toys = new ArrayList<>();
     }
@@ -78,4 +82,5 @@ public class Stock {
     public List<Toy> getToys() {
         return toys;
     }
+
 }

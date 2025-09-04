@@ -21,8 +21,10 @@ public class Store {
 
         Stream<Toy> stream = toys.stream();
 
-//        stream.forEach(System.out::println);
+        System.out.println("----------------List of stock----------------");
+        stream.forEach(System.out::println);
 
+        System.out.println("----------------Group by category----------------");
         Map<String, List<Toy>> toysByCategory = stream.collect(Collectors.groupingBy(Toy::getCategory));
 //
 ////        Map<String,List<Toy>> toysByCategory = stream.collect(Collectors.groupingBy(Toy::getCategory));

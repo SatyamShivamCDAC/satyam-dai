@@ -16,7 +16,7 @@ public class PrintNumber {
         };
 
         Runnable r2 = ()->{
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 5; i++) {
                 oddEven.printOdd();
                 try {
                     Thread.sleep(500);
