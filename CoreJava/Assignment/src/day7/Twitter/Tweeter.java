@@ -30,26 +30,30 @@ public class Tweeter {
 
 
         Stream<Tweet> stream = Tweets.stream();
-//        System.out.println("-----current month tweet------");
-//        stream.filter(t -> t.getMonth() == 8).forEach(System.out::println);
+        System.out.println("-----current month tweet------");
+        stream.filter(t -> t.getMonth() == 8).forEach(System.out::println);
 
 
-//        System.out.println("-----Tweet for Hastag--------")
-//        Predicate<Tweet> tweetForHastage = t->t.getHashtages().contains("India");
-//        stream.filter(tweetForHastage).forEach(System.out::println);
+        System.out.println("-----Tweet for Hastag--------");
+        stream = Tweets.stream();
+        Predicate<Tweet> tweetForHastage = t->t.getHashtages().contains("India");
+        stream.filter(tweetForHastage).forEach(System.out::println);
 
-//        System.out.println("-----Number of Tweet for Subject------");
-//        Map<String,List<Tweet>> listBySubject = stream.collect(Collectors.groupingBy(Tweet::getSubject));
-//        for(String key:listBySubject.keySet()){
-//            System.out.println(key + " - " +  listBySubject.get(key).size());
-//        }
+        System.out.println("-----Number of Tweet for Subject------");
+        stream = Tweets.stream();
+        Map<String,List<Tweet>> listBySubject = stream.collect(Collectors.groupingBy(Tweet::getSubject));
+        for(String key:listBySubject.keySet()){
+            System.out.println(key + " - " +  listBySubject.get(key).size());
+        }
 
 
-//        System.out.println("------tweet with more than 10k views----");
-//        stream.filter(t->t.getNoOfViews()>=10000).forEach(System.out::println);
+        System.out.println("------tweet with more than 10k views----");
+        stream = Tweets.stream();
+        stream.filter(t->t.getNoOfViews()>=10000).forEach(System.out::println);
 
 
         System.out.println("---top 5 trending topics-----");
+        stream = Tweets.stream();
         Comparator<Tweet> trending = Comparator.comparing(Tweet::getYear).thenComparing(Tweet::getMonth).thenComparing(Tweet::getNoOfViews).reversed();
         stream.sorted(trending).limit(5).forEach(System.out::println);
 

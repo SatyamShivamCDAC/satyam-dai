@@ -43,7 +43,7 @@ public class Toy {
 
     @Override
     public String toString() {
-        return "Toy{" +
+        return "{" +
                 " name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", price=" + price +

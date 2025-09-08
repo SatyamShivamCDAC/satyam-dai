@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Account account = new Account(2000);
-
+        System.out.println("Current Balance :- " + 2000);
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
