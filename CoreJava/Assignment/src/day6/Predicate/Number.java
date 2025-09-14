@@ -62,7 +62,7 @@ public class Number {
 
 
         List<Integer> list = List.of(2,7,1,4,8,10,9);
-        System.out.println(list);
+        System.out.println();
         System.out.println("------------------------Even List----------------------");
         List<Integer> list1 = operateOnNumber((n)->(n%2==0),list);
         System.out.println(list1);

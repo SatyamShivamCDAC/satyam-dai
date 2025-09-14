@@ -20,6 +20,7 @@ public class Str {
         for(int i = 0; i < arr1.length;i++){
             arr1[i] = Character.getNumericValue(charArr1[i]);
             arr2[i] = Character.getNumericValue(charArr2[i]);
+
         }
 
 

@@ -21,6 +21,7 @@ public class DemoMap {
         map1.put(100,"String");
         map1.put(200,"Man");
         map1.put(300,"tyt");
+        map1
 
         for(int key : map2.keySet()){
             System.out.println(key + " - " + map2.get(key));
